@@ -1,26 +1,26 @@
 {
-  "name": "burgers",
+  "name": "burgermaker",
   "version": "1.0.0",
-  "description": "Express App for hungry people.",
+  "description": "Makes Burgers",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BacchusKC/burgers.git"
+    "url": "git+https://github.com/BacchusKC/burgerMaker.git"
   },
   "keywords": [
     "Express",
-    "Handlebars",
-    "MySQL"
+    "handlebars"
   ],
   "author": "Travis Morris",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BacchusKC/burgers/issues"
+    "url": "https://github.com/BacchusKC/burgerMaker/issues"
   },
-  "homepage": "https://github.com/BacchusKC/burgers#readme",
+  "homepage": "https://github.com/BacchusKC/burgerMaker#readme",
   "dependencies": {
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
