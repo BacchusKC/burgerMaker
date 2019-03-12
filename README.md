@@ -1,2 +1,2 @@
-# burgerMaker
-Make Burgers and Eat Them.
+# burgers
+Create your burger, then eat it!

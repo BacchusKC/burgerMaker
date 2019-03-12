@@ -1,0 +1,77 @@
+<header>
+    <p>Burgers!</p>
+</header>
+<div class="main">
+    <div class="row">
+        <div class="col-md-7">
+            <h2>New Burgers</h2>
+            <ul>
+                {{#each burgers}}
+                {{#unless eaten}}
+                <li>
+                    {{burger_name}}
+                    <button class="eat button" data-id="{{id}}">Eat Me!</button>
+                </li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class "col-md-5">
+            <h2>Eaten Burgers</h2>
+            <ul>
+                {{#each burgers}}
+                {{#if eaten}}
+                <li>
+                    {{burger_name}}
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="main2">
+    <h2>What's your burger?</h2>
+    <form class="create-form">
+        <div class="form-group">
+            <label id="label">Burger Name:</label>
+            <input type="text" id="burgerForm" name="burger_name">
+        </div>
+        <button class="button" type="submit">Add Burger</button>
+    </form>
+</div>
+
+<script>
+    $(".eat").on("click", function (event) {
+        var id = $(this).data("id");
+
+        // Send the PUT request.
+        $.ajax("/api/burgers/" + id, {
+            type: "PUT",
+            data: id
+        }).then(
+            function () {
+                location.reload();
+            }
+        );
+    });
+
+    $(".create-form").on("submit", function (event) {
+        // Make sure to preventDefault on a submit event.
+        event.preventDefault();
+
+        var burger_name = {
+            burger_name: $("#burgerForm").val().trim(),
+        };
+
+        // Send the POST request.
+        $.ajax("/api/burgers", {
+            type: "POST",
+            data: burger_name
+        }).then(
+            function () {
+                location.reload();
+            }
+        );
+    });
+</script>
