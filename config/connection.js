@@ -7,8 +7,8 @@ else {
   connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
-    user: "test",
-    password: "password",
+    user: "root",
+    password: "Pennylane23!",
     database: "burgers_db"
   });
 };
