@@ -10,6 +10,8 @@
                 {{#unless eaten}}
                 <li>
                     {{burger_name}}
+                </li>
+                <li>
                     <button class="eat button" data-id="{{id}}">Eat Me!</button>
                 </li>
                 {{/unless}}
@@ -25,6 +27,8 @@
                 {{#if eaten}}
                 <li>
                     {{burger_name}}
+                </li>
+                <li>
                     <button class="delete button" data-id="{{id}}">Delete Me!</button>
                 </li>
                 {{/if}}

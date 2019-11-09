@@ -51,6 +51,9 @@ li, h2, #label {
 li, #label {
     font-size: 20px;
 }
+ul {
+    list-style-type: none;
+}
 .button {
     border-radius: 10px;
     border: 1px solid black;
