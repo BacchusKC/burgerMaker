@@ -26,5 +26,12 @@ router.put("/api/burgers/:id", function (req, res) {
     });
 });
 
+router.put("/api/burgers/delete/:id", function (req, res) {
+    var id = req.params.id;
+    burger.delete(id, function (result) {
+        res.status(200).end();
+    });
+});
+
 // Export routes for server.js to use.
 module.exports = router;

@@ -23,6 +23,7 @@
                 {{#if eaten}}
                 <li>
                     {{burger_name}}
+                    <button class="delete button" data-id="{{id}}">Delete Me!</button>
                 </li>
                 {{/if}}
                 {{/each}}
@@ -55,6 +56,20 @@
             }
         );
     });
+
+    $(".delete").on("click", function (event) {
+        var id = $(this).data("id");
+
+        //send the Put request.
+        $.ajax("/api/burgers/delete" + id, {
+            type: "PUT",
+            data: id
+        }).then(
+            function () {
+                location.reload();
+            }
+        )
+    })
 
     $(".create-form").on("submit", function (event) {
         // Make sure to preventDefault on a submit event.
