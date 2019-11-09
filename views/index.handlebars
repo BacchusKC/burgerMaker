@@ -3,7 +3,7 @@
 </header>
 <div class="main">
     <div class="row">
-        <div class="col-md-7">
+        <div class="col-md-8">
             <h2>New Burgers</h2>
             <ul>
                 {{#each burgers}}
@@ -61,7 +61,7 @@
         var id = $(this).data("id");
 
         //send the Put request.
-        $.ajax("/api/burgers/delete" + id, {
+        $.ajax("/api/burgers/delete/" + id, {
             type: "PUT",
             data: id
         }).then(

@@ -1,5 +1,6 @@
 .main {
-    max-width: 650px;
+    max-width: 690px;
+    width: 95%;
     margin: 40px auto 40px auto;
     background-color: goldenrod;
     padding: 20px 20px 20px 30px;
@@ -10,7 +11,8 @@
     background-repeat: repeat;
 }
 .main2 {
-    max-width: 650px;
+    max-width: 690px;
+    width: 95%;
     margin: auto;
     text-align: center;
     background-color: goldenrod;
